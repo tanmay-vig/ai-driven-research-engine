@@ -19,3 +19,6 @@ pandas
 openai
 langchain-groq
 streamlit
+google-generativeai
+streamlit_option_menu
+pypdf2
