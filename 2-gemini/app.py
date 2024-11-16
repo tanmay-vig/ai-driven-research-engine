@@ -23,6 +23,7 @@ st.sidebar.title("Navigation")
 with st.sidebar:
     selected = option_menu("Main Menu", ["Chatbot", "Upload Doc", "Research" ],  default_index=0)
 
+st.sidebar.markdown('<a href="mailto:cooltanmayvig@gmail.com"> Reach to Us and Give Feedback !</a>', unsafe_allow_html=True)
 
 # Page state control (to maintain the current page across interactions)
 if "current_page" not in st.session_state:

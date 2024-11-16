@@ -45,6 +45,7 @@ def create_vector_embedding():
         st.session_state.text_splitter=RecursiveCharacterTextSplitter(chunk_size=1000,chunk_overlap=200)
         st.session_state.final_documents=st.session_state.text_splitter.split_documents(st.session_state.docs[:50])
         st.session_state.vectors=FAISS.from_documents(st.session_state.final_documents,st.session_state.embeddings)
+        
 st.title("RAG Document Q&A With Groq And LLama3")
 
 user_prompt=st.text_input("Enter your query from the research paper")
@@ -72,6 +73,7 @@ if user_prompt:
             st.write(doc.page_content)
             st.write('------------------------')
 
+st.write('<a href="mailto:cooltanmayvig@gmail.com"> Reach to Us and Give Feedback !</a>', unsafe_allow_html=True)
 
 
 
