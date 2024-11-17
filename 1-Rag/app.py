@@ -56,7 +56,7 @@ prompt=ChatPromptTemplate.from_template(
 #         # Save FAISS vector store locally
 #             st.session_state.vectors.save_local(faiss_store_path)    
 
-st.title("RAG Document Q&A With Groq And LLama3")
+st.title("Research Engine for Commercial Courts")
 
 user_prompt=st.text_input("Enter your query from the research paper")
 

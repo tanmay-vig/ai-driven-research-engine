@@ -25,11 +25,11 @@ def generate_response(question,llm,temperature,max_tokens):
     return answer
 
 ## #Title of the app
-st.title("Enhanced Q&A Chatbot With OpenAI")
+st.title("Enhanced Q&A Research Engine with ModelFile")
 
 
 ## Select the OpenAI model
-llm=st.sidebar.selectbox("Select Open Source model",["llama3.2" , "major"])
+llm=st.sidebar.selectbox("Select Open Source model",[ "major", "llama3.2"])
 
 ## Adjust response parameter
 temperature=st.sidebar.slider("Temperature",min_value=0.0,max_value=1.0,value=0.7)
@@ -37,7 +37,7 @@ max_tokens = st.sidebar.slider("Max Tokens", min_value=50, max_value=300, value=
 st.sidebar.markdown('<a href="mailto:cooltanmayvig@gmail.com"> Reach to Us and Give Feedback !</a>', unsafe_allow_html=True)
 
 ## Main interface for user input
-st.write("Goe ahead and ask any question")
+st.write("Go ahead and ask any question")
 user_input=st.text_input("You:")
 
 submit=st.button("Ask the question")
