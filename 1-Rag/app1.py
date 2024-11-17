@@ -39,7 +39,7 @@ prompt=ChatPromptTemplate.from_template(
 )
 
 def create_vector_embedding():
-    faiss_store_path = "faiss_store" 
+    faiss_store_path = "faiss_store1" 
     if "vectors" not in st.session_state:
         st.session_state.embeddings=HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
         st.session_state.loader=PyPDFDirectoryLoader("dataset") ## Data Ingestion step
@@ -56,7 +56,8 @@ def create_vector_embedding():
             st.session_state.vectors = FAISS.from_documents(st.session_state.final_documents, st.session_state.embeddings)
         # Save FAISS vector store locally
             st.session_state.vectors.save_local(faiss_store_path)    
-st.title("RAG Document Q&A With Groq And LLama3")
+
+st.title("RAG Generator Server Side and Testing")
 
 user_prompt=st.text_input("Enter your query from the research paper")
 
