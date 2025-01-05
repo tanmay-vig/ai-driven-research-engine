@@ -22,7 +22,7 @@ os.environ['HF_TOKEN']=os.getenv("HF_TOKEN")
 from langchain_huggingface import HuggingFaceEmbeddings
 embeddings=HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
-llm=ChatGroq(groq_api_key=groq_api_key,model_name="Llama3-8b-8192")
+llm=ChatGroq(groq_api_key=groq_api_key,model_name="llama-3.3-70b-versatile")
 
 prompt=ChatPromptTemplate.from_template(
     """
