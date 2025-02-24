@@ -1,5 +1,6 @@
 # Major-project-1
 
+<b>Agentic app on : https://github.com/sanatwalia896/Vidhijna</b>
 
 **How to Setup**
 1. Create a virtual environment  using `virtualenv venv`
